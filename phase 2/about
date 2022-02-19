@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width">
+<title>About Us</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Economica&display=swap" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" integrity="sha384-EvBWSlnoFgZlXJvpzS+MAUEjvN7+gcCwH+qh7GRFOGgZO0PuwOFro7qPOJnLfe7l" crossorigin="anonymous">
+
+
+</head>
+<body>
+
+  <div class="wrap1">
+    <div class="container">
+      <div class="header nav"> 
+         <img src="images/Logo.png"class="logo">
+       <div class=" menu">
+          <a href="index.html">Home</a>
+          <a href="support.html"> Support </a>
+          <a href="Blog.html"> Blog </a> 
+          <a href="contact.html">Contact</a>
+          <a href="signup.html"> Sign Up</a>
+        </div>
+      </div>
+      <div class="clearing"></div>
+    </div>
+    <div class="sidebar"></div>
+    </div>
+    <div class="clearing"></div>
+
+<div class="wrap4">
+  <div class="container"> 
+    <div class="left-col">
+      <div class="title">
+        <h1>About Us</h1>
+      </div>
+      <div class="page-content">
+      <div class="panel borderbotm-none">
+        <div class="content">
+        <p>The best way to boost your chances of finding love these days is by choosing the right and safe dating site.<br/>
+            They provide the platform to enhance your social circle and look for like-minded people, maybe to begin the chemistry which may turn into a real-deal.<br/>
+            But first, who do you want to date?</p>
+        </p>
+        <img class="coupleimg" src="images/couple1.jpg"  >
+      <p>
+      Its not easy to find a person that you're interested in or is like-minded as you.<br/>
+      Relationships and finding the person you desire takes time.<br/> But what if a website offers you your compatible match &#128562
+      </p>  
+        <img class="coupleimg" src="images/throwinglomi.jfif" >  
+      <h1> Background</h1>
+      <p> Lomi came up to the developers mind as a solution for this problem. <br/>
+      "Lomi", lemon in the English word, is usually used as a tradition in the Ethiopian culture at a specific holiday named Epiphany or "Timket" celebrated outdoor.</br>
+      Dressed up in their finest, men and women join the crowd to celebrate.When a guy likes a girl he saw at that festival, he throws a lomi on her and expresses that he likes her. Then they will celebrate the holiday together and they date if the girl is interested too.</bold><big><br/>
+      </p>
+      <p> Lomi is an interactive, easy to use dating site where you can find your ideal match.<br/>
+        It provides a technology based solution to the dating problems.</br>
+        Nowadays in the modern world, every people are looking for a love relationship through the internet.<br/>
+        so, lomi is an ideal website for our clients looking for their mates.<br/>
+        It provides continous matches, facilitate the modification of profile as many times as needed, and provides a service for free.
+            </p>
+        </div>
+      </div>
+      </div>
+      
+    </div>
+    
+  
+  </div>
+  </div>
+
+  <div class="wrap4">
+    <div class="sidebar"></div>
+  <div class="container">
+    <div class="footer">
+      <a href="https://www.facebook.com/people/Lomi-Da/100075870416279/"><i class="bi bi-facebook"></i></a>   
+      <a href="https://twitter.com/DatingLomi"><i class="bi bi-twitter"></i></a>
+      <a href=""><i class="bi bi-instagram"></i></a>
+      <a href="mailto:lomidating@gmail.com"><i class="bi bi-google"></i></a>
+       <p>Copyright© Lomi Dating Site 2022, All rights reserved.</p><br />
+    </div>
+  <div class="clearing"></div>
+  </div>
+  <div class="sidebar"></div>
+  </div>
+<div class="shadows2">
+</div>
+</body>
+</html>
