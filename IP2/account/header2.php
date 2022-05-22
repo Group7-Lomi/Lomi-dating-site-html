@@ -10,6 +10,7 @@
               <div class="textbox">
                 <input type="text" placeholder="Search">
                 <i class="bi bi-search"></i>
+                  <input type="submit" name="submit">
               </div>
               <div class="accountimg" >
                 <div class="submenu">    
