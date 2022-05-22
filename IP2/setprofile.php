@@ -14,92 +14,7 @@
 
 </head>
 <body>
-
-<?php 
-
-$fNameErr = $lNameErr = $bdateErr = $GenderErr = $countryErr = $cityErr = $passionErr = " ";
-$fName = $lNameErr = $bdateErr = $Gender = $country = $city = $passion = " ";
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-if(empty($POST["fName"])){
-$fNameErr = "Name is required";
-}else {
-  $fName = test_input($POST["fName"]);
-  if (!preg_match("/^[a-zA-Z ]$/", $fName)) { 
-  $fNameErr = "Only letters and white space allowed"; 
-}
-}
-
-if(empty($POST["fName"])){
-    $lNameErr = "Name is required";
-    }else {
-      $lName = test_input($POST["lName"]);
-      if (!preg_match("/^[a-zA-Z ]$/", $lName)) { 
-      $lNameErr = "Only letters and white space allowed"; 
-    }
-    }
-
-    if (empty($_POST["bdate"])) {
-        $bdateErr = "Birth date is required";
-      } else {
-        $bdate = test_input($_POST["bdate"]);
-      }
-
-      if (empty($_POST["country"])) {
-        $countryErr = "Country is required";
-      } else {
-        $country = test_input($_POST["country"]);
-      }
-
-if (empty($_POST["city"])) {
-        $CityErr = "City is required";
-      } else {
-        $city = test_input($_POST["city"]);
-      }
-
-if (empty($_POST["passion"])) {
-    $passion = "Passion is required";
-  } else {
-    $comment = test_input($_POST["comment"]);
-  }
-
-  if (empty($_POST["gender"])) {
-
-    $genderErr = "Gender is required";
-  } else {
-    $gender = test_input($_POST["gender"]);
-  }
-}
-
-
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-
-?>
-
-
-  <div class="wrap1">
-    <div class="container">
-      <div class="header nav"> 
-         <img src="images/Logo.png"class="logo">
-       <div class=" menu">
-          <a href="index.html">Home</a>
-          <a href="support.html"> Support </a>
-          <a href="Blog.html"> Blog </a> 
-          <a href="contact.html">Contact</a>
-          <a href="signup.html"> Sign Up</a>
-        </div>
-      </div>
-      <div class="clearing"></div>
-    </div>
-    <div class="sidebar"></div>
-    </div>
-    <div class="clearing"></div>
+  <?php include 'header.php'; ?>
 
 <div class="wrap4">
   <div class="container"> 
@@ -111,47 +26,43 @@ function test_input($data) {
       <div class="panel borderbotm-none">
         <div class="content">
           <h2>Please Fill in To Setup Your Profile</h2>
-
-          //add picture here
-
-        <form id="form" name="myform" action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method = "POST"> 
+        <form id="form" name="myform"> 
           <div class="contact-form">
             <label> <span>First Name</span>
-            <input type="text" id="fname" class="input_text" placeholder="Abebe " name="name" id="name" <?php echo $fName;?>/>
-            <span class = "error">* <?php echo $fNameErr; ?></span>
+            <input type="text" id="fname" class="input_text" placeholder="Abebe " name="name" id="name" required/>
             </label>
-
             <label> <span>Last Name</span>
-              <input type="text" id="lname" class="input_text" placeholder=" Kebede" name="name" id="name" <?php echo $lName;?>/>
-              <span class = "error">* <?php echo $lNameErr; ?></span>
-            </label>
-
+              <input type="text" id="lname" class="input_text" placeholder=" Kebede" name="name" id="name" required/>
+              </label>
             <label><span>Birthdate</span>
-              <input type="date" id="bdate"class="input_text" placeholder="mm/dd/yy" name="Birhtdate" <?php echo $bdate;?>>
-              <span class = "error">* <?php echo $bdateErr; ?></span>
+              <input type="date" id="bdate"class="input_text" placeholder="mm/dd/yy" name="Birhtdate" required>
             </label>
-
             <label><span>Gender</span>
-              <input type="radio" class="gender" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
-              <input type="radio" class="gender" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
-              <span class="error">* <?php echo $genderErr;?></span>
+              <input type="radio" class="gender" name="gender" value="male"> Male
+              <input type="radio" class="gender" name="gender" value="female"> Female
             </label>
-
             <label><span>Country</span>
-                <input type="text"id="country" class="input_text" placeholder="Ethiopia" name="country" <?php echo $country;?>>
-                <span class = "error">* <?php echo $countryErr; ?></span>
+                <input type="text"id="country" class="input_text" placeholder="Ethiopia" name="country" required>
             </label>
-
             <label><span> City</span>
-                <input type="text" id="city" class="input_text" placeholder="Addis Ababa" name="city" <?php echo $city;?>>
-                <span class = "error">* <?php echo $cityErr; ?></span>
+                <input type="text" id="city" class="input_text" placeholder="Addis Ababa" name="city" required>
             </label>
-
-            <label><span>Passion</span>
-                <textarea  id="passion" class="input_text"rows="4" cols="50" placeholder="Describe yourself here..." <?php echo $passion;?>> </textarea>
-                <span class = "error">* <?php echo $passionErr; ?></span>
-            </label>
-
+            <label><span>Passion</span><br>
+                <input type="checkbox" class="passion" name="passion" value="sports"> Sports
+                <input type="checkbox" class="passion" name="passion" value="movies"> Movies<br>
+                <input type="checkbox" class="passion" name="passion" value="games"> Games
+                <input type="checkbox" class="passion" name="passion" value="food"> Food<br>
+                <input type="checkbox" class="passion" name="passion" value="traveling"> Traveling
+                <input type="checkbox" class="passion" name="passion" value="social media"> Social media<br>
+                <input type="checkbox" class="passion" name="passion" value="politics"> Politics
+                <input type="checkbox" class="passion" name="passion" value="animals"> Animals<br>
+                <input type="checkbox" class="passion" name="passion" value="art"> Art
+                <input type="checkbox" class="passion" name="passion" value="music"> Music<br>
+                <input type="checkbox" class="passion" name="passion" value="cooking"> Cooking
+                <input type="checkbox" class="passion" name="passion" value="makeup"> Makeup<br>
+                <input type="checkbox" class="passion" name="passion" value="Enterpreneurship"> Enterpreneurship
+                <input type="checkbox" class="passion" name="passion" value="books"> Books<br>
+            </label><br>
             <button type="reset"  onclick="prevPage()">Previous</button>
             <button type="submit"  onclick="signupparttwo()" >Next</a></button>
 
@@ -167,21 +78,6 @@ function test_input($data) {
   </div>
   </div>
 
-  <div class="wrap4">
-    <div class="sidebar"></div>
-  <div class="container">
-    <div class="footer">
-      <a href="https://www.facebook.com/people/Lomi-Da/100075870416279/"><i class="bi bi-facebook"></i></a>   
-      <a href="https://twitter.com/DatingLomi"><i class="bi bi-twitter"></i></a>
-      <a href=""><i class="bi bi-instagram"></i></a>
-      <a href="mailto:lomidating@gmail.com"><i class="bi bi-google"></i></a>
-       <p>Copyright© Lomi Dating Site 2022, All rights reserved.</p><br />
-    </div>
-  <div class="clearing"></div>
-  </div>
-  <div class="sidebar"></div>
-  </div>
-<div class="shadows2">
-</div>
+<?php include 'footer.php'; ?>
 </body>
 </html>
